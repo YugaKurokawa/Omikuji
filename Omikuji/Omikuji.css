@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #00bfff;
+}
+
+h1{
+    color: #FF0000; 
+}
+
+#kami-image-container{
+    position: relative;
+}
+
+.fade-in-text{
+    position: absolute;
+    top: 45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: black;
+    opacity: 0;
+}
+
+.fade-in-text2{
+    position: absolute;
+    top: 2%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: black;
+    opacity: 0;
+}
+
+.image-container{
+    position: relative;
+}
+
+
+#shrine-image{
+    display: block;
+    margin: 50px auto;
+}
+
+
+#furifuri-image {
+    position: relative;
+    width: 15%;
+    height: 40%;
+    display: none;
+    margin: 20px auto;
+}
+
+#kami-image{
+    width:26%;
+    height:40%;
+    display: none;
+    margin: 20px auto;	   
+}
+
+#bou-image{
+    position:absolute;
+    width:2.5%;
+    height:70%;
+    right:365px;
+    bottom:30px;
+}
+
+@keyframes rotateAndShake {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    25% {
+        transform: rotate(5deg) translateX(5px);
+    }
+    50% {
+        transform: rotate(0deg) translateX(0);
+    }
+    75% {
+        transform: rotate(-5deg) translateX(-5px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+@keyframes rotateTo150 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-120deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeftBottom {
+    0% {
+        transform: translate(0, 0) rotate(-120deg);
+    }
+    100% {
+        transform: translate(-150px, 80px) rotate(-120deg);
+    }
+}
+
+#furifuri-image.animate {
+    animation: rotateAndShake 1s infinite;
+}
+
+#furifuri-image.rotated {
+    animation: rotateTo150 1.5s forwards;
+}
+
+#bou-image.animate {
+    animation: rotateAndShake 1s infinite;
+}
+
+#bou-image.rotated {
+    animation: rotateTo150 1.5s forwards;
+}
+
+#bou-image.moved{
+    animation: moveLeftBottom 0.5s forwards;
+}
+
+
+#kami-image.appear {
+    animation: fadeIn 1s forwards; /* 2秒間かけてフェードイン */
+    animation-delay: 3s; /* 透過解除が終わってから3秒後にフェードイン */
+}
+
+
+
+#kami-text.appear{
+    animation: fadeIn 1s forwards; /* 2秒間かけてフェードイン */
+    animation-delay: 3s; /* 透過解除が終わってから3秒後にフェードイン */
+}
+
+#kami-title.appear{
+    animation: fadeIn 1s forwards; /* 2秒間かけてフェードイン */
+    animation-delay: 3s; /* 透過解除が終わってから3秒後にフェードイン */
+}
+
+
